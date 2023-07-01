@@ -14616,9 +14616,9 @@ var fetchdata = /*#__PURE__*/function () {
     return _ref.apply(this, arguments);
   };
 }();
-var getFeature = function getFeature(features, layer) {
-  if (!features.id) return;
-  var name = features.properties.nimi;
+var getFeature = function getFeature(feature, layer) {
+  if (!feature.id) return;
+  var name = feature.properties.nimi;
   layer.bindTooltip(name);
 };
 fetchdata();

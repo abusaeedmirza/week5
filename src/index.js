@@ -19,9 +19,9 @@ const fetchdata = async () => {
   const data = await result.json();
   StartMap(data);
 };
-const getFeature = (features, layer) => {
-  if (!features.id) return;
-  const name = features.properties.nimi;
+const getFeature = (feature, layer) => {
+  if (!feature.id) return;
+  const name = feature.properties.nimi;
   layer.bindTooltip(name);
 };
 fetchdata();
