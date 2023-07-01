@@ -14584,14 +14584,15 @@ var StartMap = function StartMap(data) {
     minZoom: -3
   });
   var layer = _leaflet.default.geoJSON(data, {
-    weight: 2,
-    onEachFeature: getFeature
+    onEachFeature: getFeature,
+    weight: 2
   }).addTo(map);
   var openstreetmap = _leaflet.default.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
   map.fitBounds(layer.getBounds());
-  console.log(Object.keys(data.features[0]));
-  console.log(Object.values(data.features[0].properties.nimi));
+  //console.log(Object.keys(data.features[0]));
+  //console.log(Object.values(data.features[0].properties.nimi));
 };
+
 var fetchdata = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
     var url, result, data;
