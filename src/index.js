@@ -22,6 +22,10 @@ const fetchdata = async () => {
 const getFeature = (feature, layer) => {
   if (!feature.id) return;
   const name = feature.properties.nimi;
-  layer.bindTooltip(name);
+  layer.bindTooltip(
+    `<ul> 
+    <li>Name: ${name}</li>
+    </ul>`
+  );
 };
 fetchdata();
