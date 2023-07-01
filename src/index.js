@@ -4,15 +4,15 @@ const StartMap = (data) => {
     minZoom: -3,
   });
   let layer = L.geoJSON(data, {
-    weight: 2,
     onEachFeature: getFeature,
+    weight: 2,
   }).addTo(map);
   let openstreetmap = L.tileLayer(
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
   ).addTo(map);
   map.fitBounds(layer.getBounds());
-  console.log(Object.keys(data.features[0]));
-  console.log(Object.values(data.features[0].properties.nimi));
+  //console.log(Object.keys(data.features[0]));
+  //console.log(Object.values(data.features[0].properties.nimi));
 };
 const fetchdata = async () => {
   const url =
