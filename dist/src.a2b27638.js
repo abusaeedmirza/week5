@@ -14619,7 +14619,7 @@ var fetchdata = /*#__PURE__*/function () {
 var getFeature = function getFeature(feature, layer) {
   if (!feature.id) return;
   var name = feature.properties.nimi;
-  layer.bindTooltip(name);
+  layer.bindTooltip("<ul> \n    <li>Name: ".concat(name, "</li>\n    </ul>"));
 };
 fetchdata();
 },{"leaflet":"node_modules/leaflet/dist/leaflet-src.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
