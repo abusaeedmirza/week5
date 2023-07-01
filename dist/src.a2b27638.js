@@ -14589,10 +14589,7 @@ var StartMap = function StartMap(data) {
   }).addTo(map);
   var openstreetmap = _leaflet.default.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
   map.fitBounds(layer.getBounds());
-  //console.log(Object.keys(data.features[0]));
-  //console.log(Object.values(data.features[0].properties.nimi));
 };
-
 var fetchdata = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
     var url, result, data;
@@ -14622,7 +14619,6 @@ var fetchdata = /*#__PURE__*/function () {
 var getFeature = function getFeature(features, layer) {
   if (!features.id) return;
   var name = features.properties.nimi;
-  //console.log(id);
   layer.bindTooltip(name);
 };
 fetchdata();
