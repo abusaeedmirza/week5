@@ -11,8 +11,6 @@ const StartMap = (data) => {
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
   ).addTo(map);
   map.fitBounds(layer.getBounds());
-  //console.log(Object.keys(data.features[0]));
-  //console.log(Object.values(data.features[0].properties.nimi));
 };
 const fetchdata = async () => {
   const url =
@@ -24,7 +22,6 @@ const fetchdata = async () => {
 const getFeature = (features, layer) => {
   if (!features.id) return;
   const name = features.properties.nimi;
-  //console.log(id);
   layer.bindTooltip(name);
 };
 fetchdata();
