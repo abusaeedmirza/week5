@@ -1,4 +1,3 @@
-import L from "leaflet";
 import "./styles.css";
 import "./leaflet.css";
 import L from "./leaflet";
