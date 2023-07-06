@@ -15,11 +15,7 @@ const StartMap = (data, positiveData, negativeData) => {
       const positiveMigration = positiveData.dataset.value;
       const negativeMigration = negativeData.dataset.value;
 
-      layer.bindTooltip(
-        `<ul> 
-        <li>Name: ${name}</li>
-        </ul>`
-      );
+      layer.bindTooltip(name);
       layer.bindPopup(
         `<ul> 
        <li>Positive Migration: ${positiveMigration[lastInteger - 1]}</li>
