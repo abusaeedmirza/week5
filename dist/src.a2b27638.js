@@ -14594,7 +14594,7 @@ var StartMap = function StartMap(data, positiveData, negativeData) {
       var lastInteger = parseInt(parts[1]);
       var positiveMigration = positiveData.dataset.value;
       var negativeMigration = negativeData.dataset.value;
-      layer.bindTooltip("<ul> \n        <li>Name: ".concat(name, "</li>\n        </ul>"));
+      layer.bindTooltip(name);
       layer.bindPopup("<ul> \n       <li>Positive Migration: ".concat(positiveMigration[lastInteger - 1], "</li>\n       <li>Negative Migration: ").concat(negativeMigration[lastInteger - 1], "</li>\n       </ul>"));
     },
     style: function style(feature) {
